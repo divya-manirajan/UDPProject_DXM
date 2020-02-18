@@ -1,6 +1,7 @@
 Divya Manirajan
 
 The best way to run this is with two cmd windows, using one for the server and one for the client.
+It is also important that the quote.csv file is in the same directory as the java files or the program will give an error.
 
 On the server window, once in the correct directory compile and run the server program using javac UDPServer.java and java UDPServer. When the server is run, it will report when the server started and anytime a request is received from the client.
 
@@ -14,5 +15,4 @@ Typing java UDPClient _X_ _Y_ with X and Y being arguments will set X as the hos
 
 The client will then ask for a command that the user will enter and if the user enters <REQUESTQUOTE> then a quote will be returned and the server will keep track of when this request was recieved and output this on the server cmd.
 
-If <END> is entered then the client will close and show a "Client Closed" message.exit
-  
+If <END> is entered then the client will close and show a "Client Closed" message
