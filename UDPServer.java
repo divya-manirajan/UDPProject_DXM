@@ -16,14 +16,15 @@ public class UDPServer {
 	
     public static void main(String args[]) throws Exception {
     	//Date object to get current date and time
-    	Date date = new Date();
+    	Date dateStart = new Date();
     	//Formats date and time with specified guidelines
     	SimpleDateFormat dateTimeFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm aa");
     	
          //creates datagram with port 2045
         DatagramSocket socket = new DatagramSocket(2045);
+        
         //prints out when the server is started
-        System.out.println("Server Started at "+dateTimeFormat.format(date));
+        System.out.println("Server Started at "+dateTimeFormat.format(dateStart));
         
         //byte array for data in and out
         byte[] inServer = new byte[1024];
@@ -38,7 +39,8 @@ public class UDPServer {
             // waiting for the receiving data from the client
             socket.receive(rcvPkt);
             //prints out where and when the data is received
-            System.out.println("Request Received from " +rcvPkt.getSocketAddress().toString().replace("/", "")+" "+dateTimeFormat.format(date));
+            Date dateRec = new Date();
+            System.out.println("Request Received from " +rcvPkt.getSocketAddress().toString().replace("/", "")+" "+dateTimeFormat.format(dateRec));
                       
             //sets the IP of the receiving info
             InetAddress IP = rcvPkt.getAddress();
