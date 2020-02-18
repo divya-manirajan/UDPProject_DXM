@@ -11,7 +11,8 @@ without, after compiled usign javac UDPClient.java
 Typing java UDPClient will run the client with a predetermined hostname used for the iP and a set port. These will be the same as running the program with arguments.
 
 Typing java UDPClient _X_ _Y_ with X and Y being arguments will set X as the hostname for the iP and Y as the port number.
--X needs to be 127.a.b.c and Y needs to be 2045
+-X needs to start with 127 and Y needs to be 2045
+-EX: java UDPClient 127.0.0.1 2045
 
 The client will then ask for a command that the user will enter and if the user enters <REQUESTQUOTE> then a quote will be returned and the server will keep track of when this request was recieved and output this on the server cmd.
 
